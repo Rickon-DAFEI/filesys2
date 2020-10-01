@@ -1,0 +1,28 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "uni-ui基础项目",
+			"app-plus":{"titleNView":false}
+		}
+	}    
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#FFFFFF"
+	}
+	// "tabBar":{
+	// 	"list":[
+	// 		{
+	// 			"text":"消息",
+	// 			"pagePath":"pages/index/index"
+	// 		},
+	// 		{
+	// 			"text":"注册",
+	// 			"pagePath":"pages/signin/signin"
+	// 		}
+	// 	]
+	// }
+}
