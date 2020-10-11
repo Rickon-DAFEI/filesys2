@@ -48,5 +48,11 @@
         "setting" : {
             "urlCheck" : true
         }
+    },
+    "h5" : {
+        "router" : {
+            "mode" : "hash",
+            "base" : "/h5/"
+        }
     }
 }

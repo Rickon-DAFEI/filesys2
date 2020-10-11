@@ -6,6 +6,18 @@
 			"app-plus":{"titleNView":false}
 		}
 	}    
+        ,{
+            "path" : "pages/webfile/webfile",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/sitefile/sitefile",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/phone/phone",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

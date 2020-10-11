@@ -78,15 +78,41 @@ export default{
 			"type":"receive",
 		},{
 			'img':"../../static/img/school.png",
-			'mes':"请键入您想查询的内容",
+			'mes':"请键入或单击您想查询的内容",
+			"type":"receive",
+		},]
+		return mes;
+	},
+	webfile_mes:function(){
+		let mes = [{
+			'img':"../../static/img/school.png",
+			'mes':"欢迎来到暨阳官网文件查询页面",
 			"type":"receive",
 		},{
 			'img':"../../static/img/school.png",
-			'mes':`<view style="display: flex;flex-direction: column; color: #778899">
-			<view @click = "ck(1)">1、官方文件</view>
-			<view @click = "ck(2)">2、各专业人才培养方案、题库</view>
-			<view @click = "ck(3)">3、教师联系方式查询</view>
-			<view>`,
+			'mes':"请输入您想查询的文件",
+			"type":"receive",
+		}
+		,{
+			'img':"../../static/img/school.png",
+			'mes':"如奖学金、免听、考研等",
+			"type":"receive",
+		}]
+		return mes;
+	},
+	sitefile_mes:function(){
+		let mes = [{
+			'img':"../../static/img/school.png",
+			'mes':"欢迎来到题库查询页面",
+			"type":"receive",
+		},{
+			'img':"../../static/img/school.png",
+			'mes':"请输入您想查询的文件",
+			"type":"receive",
+		}
+		,{
+			'img':"../../static/img/school.png",
+			'mes':"如概率论、微积分等",
 			"type":"receive",
 		}]
 		return mes;

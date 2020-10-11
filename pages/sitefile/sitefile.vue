@@ -27,18 +27,6 @@
 					</view>
 					<!-- <view class="other"></view> -->
 				</view>
-				<view class="receive">
-					<image src="../../static/img/school.png">
-						
-					</image>
-					<view style="display: flex;flex-direction: column; text-decoration:underline;color:#" >
-						<navigator :url="'/pages/webfile/webfile'">1、官方文件</navigator>
-						<navigator :url="'/pages/sitefile/sitefile'">2、各专业人才培养方案、题库</navigator>
-						<navigator :url="'/pages/phone/phone'">3、教师联系方式查询</navigator>
-					</view>
-					<!-- <view class="other"></view> -->
-				</view>
-
 			</view>
 			<view id="last"></view>
 		</scroll-view>
@@ -117,7 +105,7 @@
 							}
 							else{
 								that.rec = res["data"]["info"];
-								console.log(that.rec);
+								// console.log(that.rec);
 								let mes_temp = '';
 								for(let i = 0;i<that.rec.length;i++){
 									let each = that.rec[i];
@@ -146,7 +134,7 @@
 				// console.log("正要去底部");
 			},
 			getmes:function(){
-				this.mes_lis = datas.meslis();
+				this.mes_lis = datas.sitefile_mes();
 				// console.log(this.mes_lis)
 			},
 			site_files:function(){
@@ -163,7 +151,7 @@
 				var that = this;
 				that.mes_lis.push({
 					"type":"receive",
-					"mes":"请输入正确的数字",
+					"mes":"请先键入你的选择项",
 					"img":"../../static/img/school.png"
 				})
 				that.scrollToBottom();
@@ -183,29 +171,14 @@
 						"mes":message_words,
 						"img":img_url
 					})
-					if(!isNaN(message_words)&&!that.selected){
-						if(message_words==1){
-							uni.navigateTo({
-								url:"../webfile/webfile"
-							})
-						}
-						else if(message_words==2){
-							uni.navigateTo({
-								url:"../sitefile/sitefile"
-							})
-						}
-						else if(message_words==3){
-						uni.navigateTo({
-							url:"../phone/phone"
-						})
-						}
-						else{
-							that.anser_error();
-						}
-					}
+					that.getdata(message_words);
 				}
 				else{
-					that.anser_error();
+					that.mes_lis.push({
+					"type":"receive",
+					"mes":"请输入内容",
+					"img":"../../static/img/school.png"
+				})
 				}
 			
 				this.input_line = '';
